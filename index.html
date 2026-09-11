@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YAĞMUR KOCA — Yapay Zekâ / ML Mühendisi</title>
+<meta name="description" content="Yağmur Koca'nın portfolyosu — gören, okuyan ve akıl yürüten sinirsel sistemler kuran yapay zekâ / ML mühendisi. Araştırma makalesinden üretim ölçeğine.">
+<meta name="theme-color" content="#07070a">
+<meta property="og:title" content="YAĞMUR KOCA — Yapay Zekâ / ML Mühendisi">
+<meta property="og:description" content="Gören, okuyan ve akıl yürüten sinirsel sistemler — araştırmadan üretim ölçeğine.">
+<meta property="og:type" content="website">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./css/style.css">
+<script type="importmap">
+{ "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/addons/"
+} }
+</script>
+</head>
+<body data-loading>
+<a class="skip-link" href="#about">İçeriğe geç</a>
+
+<!-- ======================= PRELOADER ======================= -->
+<div id="preloader" aria-hidden="true">
+  <div class="pre-center">
+    <div class="pre-log mono" id="preLog"></div>
+    <div class="pre-brand">
+      <span class="pre-name">YAĞMUR<i>·</i>KOCA</span>
+      <span class="pre-tag mono">NÖRAL PORTFOLYO — v3.0</span>
+    </div>
+  </div>
+  <div class="pre-count" id="preCount">000</div>
+  <div class="pre-bar"><i id="preBar"></i></div>
+</div>
+
+<!-- ======================= CHROME ======================= -->
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"><span class="cursor-label mono" id="cursorLabel"></span></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+<div class="feed mono" id="feed" aria-hidden="true">
+  <span class="feed-dot"></span><span id="feedText">SİMÜLASYON · EPOCH 0000 · LOSS 0.0000 · ACC 00.0%</span>
+</div>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo" data-magnetic data-scroll>YAĞMUR<i>·</i>KOCA</a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">MENÜ +</button>
+  <nav class="nav-links mono" id="navigation" aria-label="Ana gezinme">
+    <a href="#about"    data-scroll data-scramble>HAKKIMDA</a>
+    <a href="#work"     data-scroll data-scramble>İŞLER</a>
+    <a href="#approach" data-scroll data-scramble>YAKLAŞIM</a>
+    <a href="#stack"    data-scroll data-scramble>ARAÇLAR</a>
+    <a href="#contact"  data-scroll data-scramble>İLETİŞİM</a>
+  </nav>
+  <a href="#contact" class="nav-status mono" data-scroll data-magnetic><i></i>İŞ&nbsp;TEKLİFLERİNE&nbsp;AÇIK</a>
+</header>
+
+<main>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top" data-scene="0">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow mono" data-intro>BAĞIMSIZ ZİHİN. AKILLI SİSTEMLER.</p>
+    <h1 class="hero-title" aria-label="Mühendislik zekâsı">
+      <span class="ht-line"><span class="ht-word" data-split>Mühendislik</span></span>
+      <span class="ht-line"><span class="ht-word hero-serif" data-split>zekâsı.</span></span>
+    </h1>
+    <div class="hero-sub">
+      <p class="hero-role mono" data-intro>YAĞMUR KOCA / YAPAY ZEKÂ &amp; ML MÜHENDİSİ</p>
+      <p class="hero-desc" data-intro>Makine öğrenmesinin karmaşasını, neredeyse<br>insani hissettiren şeylere dönüştürüyorum.</p>
+      <div class="hero-actions" data-intro><a href="#work" class="primary-link mono" data-scroll>İŞLERİ KEŞFET <span>↗</span></a><a href="#about" class="text-link mono" data-scroll>BİRAZ BENİ TANI <span>↗</span></a></div>
+    </div>
+  </div>
+  <div class="specimen" aria-hidden="true"><span class="mono specimen-label">ŞEK. 001 / BELİRİM ÜZERİNE</span><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="specimen-cross">+</span><span class="mono specimen-caption">GÜRÜLTÜDEN DÜZEN.<br>ETKİLEŞİM İÇİN İMLECİ GEZDİR.</span></div>
+  <div class="scene-controls mono" aria-label="Parçacık heykeli biçimi"><span>PERSPEKTİF DEĞİŞTİR</span><button data-shape="0" aria-pressed="true">01 / KÜRE</button><button data-shape="1" aria-pressed="false">02 / DÜĞÜM</button><button data-shape="4" aria-pressed="false">03 / SARMAL</button></div>
+  <div class="hero-hud mono" data-intro>
+    <span class="hud-item">41.01°N — 28.97°E&nbsp; İST</span>
+    <span class="hud-item hud-scroll">KAYDIR<i class="hline"><b></b></i></span>
+    <span class="hud-item hud-gpu">GPU&nbsp;<em>AÇIK</em></span>
+  </div>
+</section>
+
+<!-- ======================= MARQUEE ======================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" data-marquee>
+    <span>MAKİNE ÖĞRENMESİ ✦ DERİN ÖĞRENME ✦ LLM SİSTEMLERİ ✦ BİLGİSAYARLI GÖRÜ ✦ ÜRETİCİ YAPAY ZEKÂ ✦ MLOPS ✦&nbsp;</span>
+    <span>MAKİNE ÖĞRENMESİ ✦ DERİN ÖĞRENME ✦ LLM SİSTEMLERİ ✦ BİLGİSAYARLI GÖRÜ ✦ ÜRETİCİ YAPAY ZEKÂ ✦ MLOPS ✦&nbsp;</span>
+  </div>
+</div>
+
+<!-- ======================= ABOUT ======================= -->
+<section class="about" id="about" data-scene="1">
+  <div class="sec-head mono" data-reveal><span>01</span>// MANİFESTO</div>
+  <h2 class="about-statement" id="manifesto">
+    Makinelere <em>görmeyi</em>, <em>okumayı</em> ve <em>akıl yürütmeyi</em> öğretiyorum. Matematiğin sezgiye, sezginin de ürüne dönüştüğü o alana takıntılıyım.
+  </h2>
+  <div class="about-grid">
+    <div class="identity-card" data-reveal><div class="identity-monogram" aria-hidden="true">y<span>k.</span></div><div><b>Yağmur Koca</b><span class="mono">YAPAY ZEKÂ / ML MÜHENDİSİ</span></div><span class="identity-signature">Her zaman meraklı.</span></div>
+    <div class="about-story" data-reveal><p class="about-p">Soyut bir fikrin kullanışlı bir şeye dönüştüğü âna çekiliyorum. Makine zekâsı, özenli mühendislik ve insan deneyiminin kesişimi — çalışmak istediğim yer tam orası.</p><p class="about-p">Burası internetteki köşem: fikirlerin, görsel keşiflerin ve dünyaya kazandırmak istediğim sistemlerin koleksiyonu.</p><a class="text-link mono" href="#approach" data-scroll>NASIL DÜŞÜNÜRÜM <span>↗</span></a></div>
+  </div>
+</section>
+
+<!-- ======================= WORK ======================= -->
+<section class="work" id="work" data-scene="2">
+  <div class="sec-head mono" data-reveal><span>02</span>// SEÇİLMİŞ İŞLER</div>
+  <div class="section-intro" data-reveal><h2 class="editorial-title">Seçilmiş keşifler<span class="title-dot">.</span><br><em>Amaç olasılıkla buluşur.</em></h2><p>Yapay zekâ / ML konseptlerinden bir koleksiyon.<br>Bağımsız hayal edildi. Görsel olarak keşfedildi.<br><span class="mono">KONSEPT ÇALIŞMALARI — ÜRÜN DEĞİLDİR</span></p></div>
+  <div class="work-filters mono" aria-label="Keşifleri filtrele"><button data-filter="all" aria-pressed="true">TÜMÜ <span>05</span></button><button data-filter="vision" aria-pressed="false">GÖRÜ</button><button data-filter="language" aria-pressed="false">DİL</button><button data-filter="systems" aria-pressed="false">SİSTEMLER</button></div>
+
+  <div class="stack" id="workStack">
+
+    <article class="card">
+      <div class="card-info">
+        <div class="card-top mono"><span>PRJ—01</span><span>2025</span></div>
+        <h3 class="card-title">SYNTHESIS</h3>
+        <p class="card-desc">Gürültüden netliği geri kazanma konsepti. Gizli difüzyonun tıbbi görüntüyü, önemli detayları koruyarak nasıl yeniden kurabileceğini araştıran bir çalışma.</p>
+        <ul class="card-tags mono"><li>PYTORCH</li><li>DIFFUSION</li><li>ONNX</li><li>DICOM</li></ul>
+      </div>
+      <div class="card-art"><canvas data-art="flow"></canvas><span class="card-art-tag mono">ŞEK.01 — AKIŞ ALANI / GİZLİ UZAY</span></div>
+      <span class="card-num" aria-hidden="true">01</span>
+    </article>
+
+    <article class="card">
+      <div class="card-info">
+        <div class="card-top mono"><span>PRJ—02</span><span>2025</span></div>
+        <h3 class="card-title">ORACLE</h3>
+        <p class="card-desc">Kaynağa dayalı dil sistemleri üzerine bir keşif. Retrieval, araç kullanımı ve özenli değerlendirme — kaynağına izlenebilen cevaplar etrafında tasarlandı.</p>
+        <ul class="card-tags mono"><li>LLM</li><li>RAG</li><li>VLLM</li><li>K8S</li></ul>
+      </div>
+      <div class="card-art"><canvas data-art="tokens"></canvas><span class="card-art-tag mono">ŞEK.02 — DİKKAT / TOKEN AKIŞI</span></div>
+      <span class="card-num" aria-hidden="true">02</span>
+    </article>
+
+    <article class="card">
+      <div class="card-info">
+        <div class="card-top mono"><span>PRJ—03</span><span>2024</span></div>
+        <h3 class="card-title">RETINA</h3>
+        <p class="card-desc">Az ile daha çok görmek. Verimli görsel algı üzerine bir çalışma — anlamsal anlayışı, dünyayla etkileşen cihazlara yaklaştırıyor.</p>
+        <ul class="card-tags mono"><li>VISION</li><li>TENSORRT</li><li>EDGE&nbsp;AI</li><li>C++</li></ul>
+      </div>
+      <div class="card-art"><canvas data-art="scatter"></canvas><span class="card-art-tag mono">ŞEK.03 — GÖMME UZAYI</span></div>
+      <span class="card-num" aria-hidden="true">03</span>
+    </article>
+
+    <article class="card">
+      <div class="card-info">
+        <div class="card-top mono"><span>PRJ—04</span><span>2024</span></div>
+        <h3 class="card-title">AURORA</h3>
+        <p class="card-desc">Sonsuzluğun içinde ilgiliyi bulmak. Öneri mimarileri, gömme uzayları ve keşfin ince geometrisi üzerine bir araştırma.</p>
+        <ul class="card-tags mono"><li>RECSYS</li><li>SPARK</li><li>FAISS</li><li>RAY</li></ul>
+      </div>
+      <div class="card-art"><canvas data-art="ridge"></canvas><span class="card-art-tag mono">ŞEK.04 — KAYIP YÜZEYİ</span></div>
+      <span class="card-num" aria-hidden="true">04</span>
+    </article>
+
+    <article class="card">
+      <div class="card-info">
+        <div class="card-top mono"><span>PRJ—05</span><span>2023</span></div>
+        <h3 class="card-title">PULSE</h3>
+        <p class="card-desc">Sinyalin içine saklanmış örüntüler. Zamansal yapıyı, kapsamlı etiketlere bel bağlamadan anlamak için öz-denetimli öğrenme konsepti.</p>
+        <ul class="card-tags mono"><li>SSL</li><li>TIME-SERIES</li><li>JAX</li><li>TPU</li></ul>
+      </div>
+      <div class="card-art"><canvas data-art="wave"></canvas><span class="card-art-tag mono">ŞEK.05 — SİNYAL / SPEKTRUM</span></div>
+      <span class="card-num" aria-hidden="true">05</span>
+    </article>
+
+  </div>
+</section>
+
+<!-- ======================= LAB (interactive) ======================= -->
+<section class="approach" id="approach" data-scene="3">
+  <div class="sec-head mono" data-reveal><span>03</span>// SİSTEMLERİN ARKASINDA</div>
+  <div class="section-intro" data-reveal><h2 class="editorial-title">Meraklı bir zihin.<br><em>Düşünülmüş bir yaklaşım.</em></h2><p>Defterdeki bir modelden fazlası.<br>İlk sorudan son adıma kadar<br>özenle kurulmuş sistemler.</p></div>
+  <div class="bento-grid">
+    <article class="bento bento-system" data-reveal>
+      <span class="bento-kicker mono">01 / BÜYÜK RESİM</span>
+      <div class="system-map" aria-hidden="true"><div class="map-orbit"></div><div class="map-orbit inner"></div><span class="map-node node-data">VERİ</span><span class="map-node node-model">MODEL</span><span class="map-node node-eval">TEST</span><span class="map-node node-ship">ÜRÜN</span><div class="map-core">y<span>k</span><i></i></div><svg viewBox="0 0 600 260" preserveAspectRatio="none"><path d="M85 130H245 M355 130H515 M300 35V95 M300 165V225"/></svg></div>
+      <div class="bento-copy"><h3>İyi modeller.<br><em>Daha iyi sistemler.</em></h3><p>Veri kalitesi, değerlendirme ve dağıtım sonradan akla gelen detaylar değil. Bunlar mimarinin ta kendisi.</p></div>
+    </article>
+    <article class="bento bento-terminal" data-reveal>
+      <div class="terminal-bar mono"><span><i></i><i></i><i></i></span>dusunce.py</div>
+      <div class="code-art" aria-label="Kodla ifade edilmiş bir felsefe"><p><span>01</span> <i>class</i> DusunceliZeka:</p><p><span>02</span> &nbsp; amac = <b>"once insan"</b></p><p><span>03</span> &nbsp; merak = <b>float("inf")</b></p><p><span>04</span></p><p><span>05</span> &nbsp; <i>def</i> kur(self, fikir):</p><p><span>06</span> &nbsp; &nbsp; sorgula(fikir)</p><p><span>07</span> &nbsp; &nbsp; test_et(varsayimlar)</p><p><span>08</span> &nbsp; &nbsp; <i>return</i> yinele()</p><p class="terminal-prompt"><span>09</span> &gt; hep_ogreniyor<span class="caret">_</span></p></div>
+      <div class="bento-copy"><h3>Araştırma odaklı.<br>Gerçeklikle sınanmış.</h3><p>Merak işi başlatır. Kanıt, neyin kalacağına karar verir.</p></div>
+    </article>
+    <article class="bento bento-world" data-reveal>
+      <span class="bento-kicker mono">02 / SINIR TANIMAZ</span>
+      <div class="wire-globe" aria-hidden="true"><i></i><i></i><i></i><i></i><span></span></div>
+      <div class="world-location mono"><i></i> İSTANBUL ↔ HER YER</div>
+      <div class="bento-copy"><h3>Farklı saat dilimleri.<br><em>Aynı frekans.</em></h3><p>Net düşünce. Ortak bağlam.<br>İyi iş, coğrafyayla sınırlı değil.</p></div>
+    </article>
+    <article class="bento bento-build" data-reveal>
+      <span class="bento-kicker mono">03 / SONRAKİ BÖLÜM</span>
+      <div class="build-glyph" aria-hidden="true">↗</div>
+      <div class="bento-copy"><h3>Senin bir sonraki fikrin.<br><em>Bizim yeni takıntımız.</em></h3><p>Aklında iddialı bir şey mi var?<br>İçindeki ilginç problemi birlikte bulalım.</p><a href="#contact" class="bento-link mono" data-scroll>KONUŞALIM <span>↗</span></a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= STACK ======================= -->
+<section class="stack-sec" id="stack" data-scene="4">
+  <div class="sec-head mono" data-reveal><span>04</span>// YETENEKLER</div>
+  <h2 class="sec-title"><span data-split>ARAÇ&nbsp;KUTUSU</span></h2>
+  <div class="caps">
+    <div class="cap" data-reveal><span class="cap-idx mono">C—01</span><h3 data-scramble>LLM SİSTEMLERİ</h3><p class="mono">AJANLAR · RAG · FINE-TUNING · EVALS · VLLM</p></div>
+    <div class="cap" data-reveal><span class="cap-idx mono">C—02</span><h3 data-scramble>BİLGİSAYARLI GÖRÜ</h3><p class="mono">TESPİT · SEGMENTASYON · VİDEO · EDGE</p></div>
+    <div class="cap" data-reveal><span class="cap-idx mono">C—03</span><h3 data-scramble>ÜRETİCİ MODELLER</h3><p class="mono">DİFÜZYON · VAE · FLOW-MATCHING · SES</p></div>
+    <div class="cap" data-reveal><span class="cap-idx mono">C—04</span><h3 data-scramble>RL &amp; KARAR</h3><p class="mono">BANDIT · RLHF · PLANLAMA · SIM2REAL</p></div>
+    <div class="cap" data-reveal><span class="cap-idx mono">C—05</span><h3 data-scramble>MLOPS &amp; ALTYAPI</h3><p class="mono">K8S · RAY · FEATURE STORE · GPU SCHED</p></div>
+    <div class="cap" data-reveal><span class="cap-idx mono">C—06</span><h3 data-scramble>VERİ MÜHENDİSLİĞİ</h3><p class="mono">SPARK · STREAMING · ETİKETLEME · DQ</p></div>
+  </div>
+  <p class="stack-strip mono" data-reveal>PYTORCH — JAX — TRITON — CUDA — ONNX — TENSORRT — HF — WANDB — DOCKER — RAY — FAISS — POSTGRES</p>
+</section>
+
+<!-- ======================= EXPERIENCE ======================= -->
+<section class="xp" id="xp" data-scene="5">
+  <div class="sec-head mono" data-reveal><span>05</span>// YOLCULUK</div>
+  <h2 class="sec-title"><span data-split>ZAMAN&nbsp;ÇİZELGESİ</span></h2>
+  <p class="content-note">ÖRNEK ZAMAN ÇİZELGESİ — Şirketler, roller ve tarihler gerçek kariyer geçmişi için yer tutucudur.</p>
+  <ul class="xp-list">
+    <li class="xp-row" data-reveal>
+      <span class="xp-date mono">2024 — ŞİMDİ</span>
+      <div class="xp-body"><h3>KIDEMLİ ML MÜHENDİSİ</h3><span class="xp-org mono">HELIX AI — LLM PLATFORMU</span>
+      <p>Ajan altyapısı ve model kalitesine liderlik. Çıkarım maliyetini 4× düşürdü, herkesin hâlâ tartıştığı değerlendirme düzeneğini kurdu.</p></div>
+    </li>
+    <li class="xp-row" data-reveal>
+      <span class="xp-date mono">2022 — 2024</span>
+      <div class="xp-body"><h3>ML MÜHENDİSİ</h3><span class="xp-org mono">ORBIT — OTONOM ALGI</span>
+      <p>Teslimat robotları için çok kameralı algılama ve takip. Uç dağıtım yığınını uçtan uca sahiplendi.</p></div>
+    </li>
+    <li class="xp-row" data-reveal>
+      <span class="xp-date mono">2020 — 2022</span>
+      <div class="xp-body"><h3>VERİ BİLİMCİ → ML</h3><span class="xp-org mono">MERIDIAN — PAZARYERİ</span>
+      <p>Sıralama ve öneri sistemleri. A/B testlerinin yalan söyleyebildiğini, iyi özniteliklerin süslü modelleri (bazen) yendiğini öğrendi.</p></div>
+    </li>
+    <li class="xp-row" data-reveal>
+      <span class="xp-date mono">2019</span>
+      <div class="xp-body"><h3>LİSANS — BİLGİSAYAR MÜHENDİSLİĞİ</h3><span class="xp-org mono">TEZ: UÇ TPU'LARDA NÖRAL STİL TRANSFERİ</span>
+      <p>Takıntının başladığı yer — bir GTX 1060 ve fazla miktarda kahve.</p></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section class="contact" id="contact" data-scene="5">
+  <div class="sec-head mono" data-reveal><span>06</span>// İLETİŞİM</div>
+  <h2 class="contact-title" aria-label="Güzel şeyler bir sohbetle başlar.">
+    <span class="ct-line"><span data-split>Güzel şeyler</span></span>
+    <span class="ct-line"><span data-split class="ht-outline">bir sohbetle başlar.</span></span>
+  </h2>
+  <p class="content-note" style="color:#172017;border-color:#172017">İLETİŞİM ŞABLONU — Örnek e-posta ve sosyal bağlantıları yayınlamadan önce kendi bilgilerinle değiştir.</p>
+  <div class="contact-actions">
+    <a class="btn-big" href="mailto:merhaba@yagmurkoca.dev" data-magnetic data-cursor="MERHABA DE →">
+      <span class="btn-big-in">merhaba@yagmurkoca.dev</span>
+    </a>
+    <button class="copy-email" type="button" aria-live="polite">E-POSTAYI KOPYALA</button>
+    <ul class="socials mono">
+      <li><a href="https://github.com/yagmurkoca" target="_blank" rel="noopener" data-magnetic data-scramble>GITHUB ↗</a></li>
+      <li><a href="https://linkedin.com/" target="_blank" rel="noopener" data-magnetic data-scramble>LINKEDIN ↗</a></li>
+      <li><a href="https://x.com/" target="_blank" rel="noopener" data-magnetic data-scramble>X ↗</a></li>
+      <li><a href="https://kaggle.com/" target="_blank" rel="noopener" data-magnetic data-scramble>KAGGLE ↗</a></li>
+    </ul>
+  </div>
+  <footer class="footer mono">
+    <span>© 2026 YAĞMUR KOCA — ELLE İNŞA EDİLDİ</span>
+    <span id="clock">İST 00:00:00</span>
+    <a href="#top" data-scroll data-magnetic>BAŞA DÖN ↑</a>
+  </footer>
+</section>
+
+</main>
+
+<script src="./vendor/gsap/gsap.min.js"></script>
+<script src="./vendor/gsap/ScrollTrigger.min.js"></script>
+<script src="./vendor/lenis/lenis.min.js"></script>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
